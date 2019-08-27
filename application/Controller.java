@@ -122,7 +122,7 @@ public class Controller {
     }
 
     @FXML
-    public void selectedDice1() throws IOException {  // don't know how to do this in loop for now, need to make new function for each dice
+    public void selectedDice1() throws IOException {  // don't know how to do this in loop for now, need to make new function for each dice, will change it in the future
         if(!dice.get(0).isSelected()) {
             BufferedImage image = ImageIO.read(new File("src/sample/kosci/" + dice.get(0).getValue() + "red.jpg"));
             Image red = SwingFXUtils.toFXImage(image, null);
