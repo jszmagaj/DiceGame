@@ -49,6 +49,13 @@ public class Controller {
         for (int i = 0; i < 5; i++) {
             dice.add(new Kosc());
         }
+        
+        kosci.add(kosc1);
+        kosci.add(kosc2);
+        kosci.add(kosc3);
+        kosci.add(kosc4);
+        kosci.add(kosc5);
+
         roll();
         change = 0;
 
@@ -60,13 +67,6 @@ public class Controller {
         int random;
         double randomX;
         double randomRotate;
-
-        kosci.add(kosc1);
-        kosci.add(kosc2);
-        kosci.add(kosc3);
-        kosci.add(kosc4);
-        kosci.add(kosc5);
-
 
         for (int i = 0; i < 5; i++) {
             random = (int) (Math.random() * 6) + 1;
