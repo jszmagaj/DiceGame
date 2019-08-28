@@ -76,7 +76,7 @@ public class Controller {
             if(!dice.get(i).isSelected()) {
                 setImages(random, dice.get(i));
                 dice.get(i).setValue(random); // set random value to each dice
-                Image image = SwingFXUtils.toFXImage(dice.get(i).getImage(), null); // zamienia BufferedImage na Image
+                Image image = SwingFXUtils.toFXImage(dice.get(i).getImage(), null); // BufferedImage to Image
                 kosci.get(i).setImage(image);
                 kosci.get(i).setX(randomX);
                 kosci.get(i).setY(randomX);
@@ -208,10 +208,10 @@ public class Controller {
                 e.printStackTrace();
             }
         }
+        changePlayer();
         change = 0;
         rollShow();
         show();
-        changePlayer();
 
 
     }
