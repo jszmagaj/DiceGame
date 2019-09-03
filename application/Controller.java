@@ -336,6 +336,9 @@ public class Controller {
 
     private void sameThree() {
 
+        int rest = 0;
+        int rest2 = 0;
+
         if (currentPlayer.equals("p1")) {
 
             if (!threex1.isDisabled()) {
@@ -347,34 +350,47 @@ public class Controller {
                     a[dice.get(i).getValue() - 1]++;
                 }
 
-                for(int i=0; i<a.length; i++){
-                    if(a[i] >=3){
-                        threex1.setText(String.valueOf(a[i]*(i+1)));
+                for (int i = 0; i < a.length; i++) {
+                    if (a[i] < 3) {
+                        rest += (a[i] * (i + 1));
+                    }
+                }
+                for (int i = 0; i < a.length; i++) {
+                    if (a[i] >= 3) {
+                        threex1.setText(String.valueOf(a[i] * (i + 1) + rest));
                     }
                 }
             }
         }
-        if (currentPlayer.equals("p2")) {
+            if (currentPlayer.equals("p2")) {
 
-            if (!threex2.isDisabled()) {
-                threex2.setText("0");
-                int[] a = new int[6];
+                if (!threex2.isDisabled()) {
+                    threex2.setText("0");
+                    int[] a = new int[6];
 
 
-                for (int i = 0; i < dice.size(); i++) {
-                    a[dice.get(i).getValue() - 1]++;
-                }
+                    for (int i = 0; i < dice.size(); i++) {
+                        a[dice.get(i).getValue() - 1]++;
+                    }
 
-                for(int i=0; i<a.length; i++){
-                    if(a[i] >=3){
-                        threex2.setText(String.valueOf(a[i]*(i+1)));
+                    for (int i = 0; i < a.length; i++) {
+                        if (a[i] < 3) {
+                            rest2 += (a[i] * (i + 1));
+                        }
+                    }
+                    for (int i = 0; i < a.length; i++) {
+                        if (a[i] >= 3) {
+                            threex2.setText(String.valueOf(a[i] * (i + 1) + rest2));
+                        }
                     }
                 }
             }
         }
-    }
 
-    private void sameFour() {
+   private void sameFour() {
+
+        int rest = 0;
+        int rest2 = 0;
 
         if (currentPlayer.equals("p1")) {
 
@@ -388,8 +404,13 @@ public class Controller {
                 }
 
                 for(int i=0; i<a.length; i++){
-                    if(a[i] >=4){
-                        fourx1.setText(String.valueOf(a[i]*(i+1)));
+                    if(a[i] <4){
+                        rest +=(a[i]*(i+1));
+                    }
+                }
+                for (int i = 0; i < a.length; i++) {
+                    if (a[i] >= 4) {
+                        fourx1.setText(String.valueOf(a[i] * (i + 1) + rest));
                     }
                 }
             }
@@ -406,8 +427,13 @@ public class Controller {
                 }
 
                 for(int i=0; i<a.length; i++){
-                    if(a[i] >=4){
-                        fourx2.setText(String.valueOf(a[i]*(i+1)));
+                    if(a[i] <4){
+                        rest2 +=(a[i]*(i+1));
+                    }
+                }
+                for (int i = 0; i < a.length; i++) {
+                    if (a[i] >= 4) {
+                        fourx2.setText(String.valueOf(a[i] * (i + 1) + rest2));
                     }
                 }
             }
