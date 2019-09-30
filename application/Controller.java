@@ -682,5 +682,6 @@ public class Controller {
         dialog.setHeaderText(winner + " won!");
         dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
         dialog.showAndWait();
+        System.exit(0);
     }
 }
